@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "@vocab": "https://github.com/Sony#",
+    "schema": "https://schema.org/",
+    "sony": "https://github.com/Sony#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "license": "schema:license",
+    "codeRepository": "schema:codeRepository",
+    "SoftwareLibrary": "schema:SoftwareSourceCode",
+    "MachineLearningFramework": "sony:MachineLearningFramework",
+    "DistributedIDGenerator": "sony:DistributedIDGenerator",
+    "CircuitBreaker": "sony:CircuitBreaker",
+    "IoTBoard": "sony:IoTBoard"
+  }
+}

@@ -8,11 +8,145 @@ tags:
   - Consumer Electronics
   - Gaming
   - Entertainment
-description: 'A Japanese multinational conglomerate spanning electronics, gaming, entertainment, and financial services. Operates PlayStation, Sony Pictures, Sony Music, and a leading image sensor business with products and content reaching billions worldwide.'
+  - Artificial Intelligence
+description: >-
+  Sony Group Corporation is a Japanese multinational spanning electronics,
+  gaming, entertainment, image sensors, and financial services. Sony's
+  developer-facing surface includes the Neural Network Libraries (NNabla)
+  deep-learning framework, the Spresense IoT board SDK, Sonyflake distributed
+  ID service, and a portfolio of Go and embedded-Linux open-source tooling
+  maintained on github.com/Sony.
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-16'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: sony:nnabla
+    name: Sony Neural Network Libraries (NNabla)
+    tags:
+      - Machine Learning
+      - Deep Learning
+      - Open Source
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://nnabla.org/
+    properties:
+      - url: https://github.com/sony/nnabla
+        type: SourceCode
+      - url: https://nnabla.readthedocs.io/
+        type: Documentation
+      - url: https://github.com/sony/nnabla-examples
+        type: Samples
+      - url: https://pypi.org/project/nnabla/
+        type: Package
+      - url: json-schema/nnabla-network-schema.json
+        type: JSONSchema
+    description: >-
+      NNabla is Sony's open-source deep-learning framework with Python and C++
+      bindings, dynamic and static computation graphs, GPU/CUDA acceleration,
+      and a model format for training and inference. Distributed under Apache
+      2.0.
+  - aid: sony:sonyflake
+    name: Sonyflake Distributed ID Generator
+    tags:
+      - Distributed Systems
+      - Open Source
+      - Identifiers
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://github.com/sony/sonyflake
+    properties:
+      - url: https://github.com/sony/sonyflake
+        type: SourceCode
+      - url: https://pkg.go.dev/github.com/sony/sonyflake
+        type: Documentation
+      - url: json-schema/sonyflake-id-schema.json
+        type: JSONSchema
+    description: >-
+      Sonyflake is a Go library producing 63-bit unique IDs inspired by
+      Twitter's Snowflake but tuned for longer machine-ID space and longer
+      lifetime. MIT licensed.
+  - aid: sony:gobreaker
+    name: Sony gobreaker Circuit Breaker
+    tags:
+      - Resilience
+      - Open Source
+      - Microservices
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://github.com/sony/gobreaker
+    properties:
+      - url: https://github.com/sony/gobreaker
+        type: SourceCode
+      - url: https://pkg.go.dev/github.com/sony/gobreaker
+        type: Documentation
+    description: >-
+      gobreaker is a Go implementation of the Circuit Breaker pattern, widely
+      used in microservice resilience designs. MIT licensed.
+  - aid: sony:spresense-sdk
+    name: Sony Spresense SDK
+    tags:
+      - IoT
+      - Embedded
+      - Edge Computing
+      - SDK
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.sony.com/spresense/
+    properties:
+      - url: https://github.com/sonydevworld/spresense
+        type: SourceCode
+      - url: https://developer.sony.com/spresense/development-guides/
+        type: Documentation
+      - url: https://www.sony-semicon.com/en/products/spresense/
+        type: ProductPage
+    description: >-
+      Spresense is Sony's hexa-core Cortex-M4F IoT board powered by the
+      CXD5602 chipset. The Spresense SDK provides NuttX-based C/C++ APIs for
+      multi-GNSS positioning, high-resolution audio, camera capture, and LTE
+      connectivity at the edge.
 common:
   - type: Website
     url: https://www.sony.com/
+  - type: GitHubOrg
+    url: https://github.com/Sony
+  - type: OpenSourcePortal
+    url: https://oss.sony.net/
+  - type: SpectralRules
+    url: rules/sony-spectral-rules.yml
+  - type: NaftikoCapability
+    url: capabilities/sony-developer-platform.yaml
+  - type: Vocabulary
+    url: vocabulary/sony-vocabulary.yml
+  - type: Features
+    data:
+      - name: Deep Learning Framework
+        description: NNabla provides dynamic and static computation graphs for training and inference
+      - name: Distributed ID Generation
+        description: Sonyflake mints 63-bit time-ordered unique IDs across distributed nodes
+      - name: Circuit Breaker Resilience
+        description: gobreaker brings circuit-breaker resilience to Go microservice fleets
+      - name: Edge IoT Compute
+        description: Spresense delivers hexa-core Cortex-M4F compute with GNSS, audio, and LTE
+      - name: Open Source Licensing
+        description: Sony publishes most libraries under Apache 2.0 or MIT
+  - type: UseCases
+    data:
+      - name: ML Model Training
+        description: Train and deploy deep-learning models with NNabla on GPUs and embedded devices
+      - name: Globally Unique IDs
+        description: Generate guaranteed-unique identifiers for events, orders, and records
+      - name: Resilient Microservices
+        description: Use gobreaker to prevent cascading failures in distributed services
+      - name: IoT Sensing and Positioning
+        description: Build asset tracking, agricultural sensing, and infrastructure inspection with Spresense
+      - name: Edge AI Inference
+        description: Combine NNabla and Spresense to run inference at the edge with low power
+  - type: Integrations
+    data:
+      - name: Python Ecosystem
+        description: NNabla integrates with NumPy, PyTorch comparators, and ONNX export
+      - name: Go Ecosystem
+        description: Sonyflake and gobreaker are widely adopted Go libraries
+      - name: Arduino IDE
+        description: Spresense ships an Arduino-compatible toolchain in addition to the NuttX SDK
+      - name: CUDA
+        description: NNabla can target NVIDIA CUDA-enabled GPUs for accelerated training
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

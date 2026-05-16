@@ -1,0 +1,51 @@
+apiVersion: naftiko.dev/v1
+kind: Capability
+metadata:
+  name: sony-developer-platform
+  provider: sony
+  description: >-
+    Sony's developer surface is library- and SDK-first: NNabla for deep
+    learning, Sonyflake for distributed IDs, gobreaker for resilience, and
+    Spresense for IoT.
+spec:
+  workflows:
+    - name: train-and-export-model
+      description: Train an NNabla network and export an NNP model
+      steps:
+        - id: build-graph
+          operation: nnabla.build_graph
+        - id: train
+          operation: nnabla.train
+          dependsOn: build-graph
+        - id: save-nnp
+          operation: nnabla.save_nnp
+          dependsOn: train
+    - name: generate-distributed-ids
+      description: Configure Sonyflake and mint unique IDs in a Go service
+      steps:
+        - id: configure
+          operation: sonyflake.NewSonyflake
+        - id: mint
+          operation: sonyflake.NextID
+          dependsOn: configure
+    - name: protect-with-breaker
+      description: Wrap an outbound call with gobreaker
+      steps:
+        - id: new-breaker
+          operation: gobreaker.NewCircuitBreaker
+        - id: execute
+          operation: gobreaker.Execute
+          dependsOn: new-breaker
+    - name: capture-spresense-data
+      description: Capture audio/GNSS on a Spresense board
+      steps:
+        - id: init-hardware
+          operation: spresense.init
+        - id: capture
+          operation: spresense.capture
+          dependsOn: init-hardware
+  licensing:
+    - nnabla: Apache-2.0
+    - sonyflake: MIT
+    - gobreaker: MIT
+    - spresense: BSD-3-Clause

@@ -1,0 +1,22 @@
+vocabulary: sony
+description: Vocabulary for Sony developer-facing libraries and SDKs
+terms:
+  - term: NNabla
+    definition: Sony's open-source deep-learning framework with dynamic/static graphs
+  - term: NNP
+    definition: NNabla's serialized model file containing network, variables, and parameters
+  - term: Sonyflake
+    definition: Sony's 63-bit distributed unique-ID generator with extended machine-ID space
+  - term: gobreaker
+    definition: Sony's Go implementation of the Circuit Breaker pattern
+  - term: Spresense
+    definition: Sony's hexa-core Cortex-M4F IoT board built on the CXD5602 chipset
+  - term: NuttX
+    definition: The real-time OS that runs on Spresense's primary cores
+  - term: Multi-GNSS
+    definition: Concurrent positioning using GPS, QZSS, and GLONASS, supported on Spresense
+dimensions:
+  - name: surface
+    values: [Library, SDK, Hardware, Service]
+  - name: ecosystem
+    values: [Python, Go, C, Arduino]

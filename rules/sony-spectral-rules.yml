@@ -1,0 +1,26 @@
+extends: [[spectral:oas, all]]
+rules:
+  sony-tags-title-case:
+    description: Tags should be Title Case
+    given: $.tags[*].name
+    severity: warn
+    then:
+      function: pattern
+      functionOptions:
+        match: '^([A-Z][a-zA-Z0-9]*)( [A-Z][a-zA-Z0-9]*)*$'
+  sony-operation-id-camel-case:
+    description: operationId should be camelCase
+    given: $.paths.*.*.operationId
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: '^[a-z][a-zA-Z0-9]+$'
+  sony-license-required:
+    description: Repos should declare an Apache 2.0 or MIT license
+    given: $.info.license.name
+    severity: info
+    then:
+      function: pattern
+      functionOptions:
+        match: '(Apache-2\\.0|MIT)'

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sony/main/json-schema/sonyflake-id-schema.json",
+  "title": "Sonyflake ID",
+  "description": "A 63-bit unique identifier produced by Sonyflake, composed of time, sequence, and machine ID fields.",
+  "type": "object",
+  "required": ["id"],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9223372036854775807,
+      "description": "The composite 63-bit identifier."
+    },
+    "time": {
+      "type": "integer",
+      "description": "Elapsed time in 10ms units since the configured Sonyflake epoch (39 bits)."
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Per-10ms sequence number (8 bits)."
+    },
+    "machineID": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 65535,
+      "description": "Identifier for the machine generating the ID (16 bits)."
+    }
+  }
+}

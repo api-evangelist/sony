@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sony/main/json-schema/nnabla-network-schema.json",
+  "title": "NNabla Network Definition",
+  "description": "Schema describing the structural fields used by NNabla's NNP (network) model files: networks, variables, parameters, optimizers, and executors.",
+  "type": "object",
+  "required": ["networks"],
+  "properties": {
+    "global_config": {
+      "type": "object",
+      "properties": {
+        "default_context": {
+          "type": "object",
+          "properties": {
+            "backend": { "type": "array", "items": { "type": "string" } },
+            "array_class": { "type": "string" },
+            "device_id": { "type": "string" }
+          }
+        }
+      }
+    },
+    "networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "batch_size": { "type": "integer" },
+          "variable": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "type": { "type": "string", "enum": ["Buffer", "Parameter"] },
+                "shape": {
+                  "type": "object",
+                  "properties": {
+                    "dim": { "type": "array", "items": { "type": "integer" } }
+                  }
+                }
+              }
+            }
+          },
+          "function": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "type": { "type": "string" },
+                "input": { "type": "array", "items": { "type": "string" } },
+                "output": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "executor": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "network_name": { "type": "string" }
+        }
+      }
+    }
+  }
+}
