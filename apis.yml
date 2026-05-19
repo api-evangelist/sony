@@ -101,6 +101,8 @@ apis:
       multi-GNSS positioning, high-resolution audio, camera capture, and LTE
       connectivity at the edge.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sony
   - type: Website
     url: https://www.sony.com/
   - type: GitHubOrg
