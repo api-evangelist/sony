@@ -2,7 +2,7 @@ aid: sony
 url: https://raw.githubusercontent.com/api-evangelist/sony/refs/heads/main/apis.yml
 name: Sony
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Technology
   - Consumer Electronics
@@ -26,7 +26,7 @@ apis:
       - Machine Learning
       - Deep Learning
       - Open Source
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://nnabla.org/
     properties:
       - url: https://github.com/sony/nnabla
@@ -50,7 +50,7 @@ apis:
       - Distributed Systems
       - Open Source
       - Identifiers
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://github.com/sony/sonyflake
     properties:
       - url: https://github.com/sony/sonyflake
@@ -69,7 +69,7 @@ apis:
       - Resilience
       - Open Source
       - Microservices
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://github.com/sony/gobreaker
     properties:
       - url: https://github.com/sony/gobreaker
@@ -86,7 +86,7 @@ apis:
       - Embedded
       - Edge Computing
       - SDK
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.sony.com/spresense/
     properties:
       - url: https://github.com/sonydevworld/spresense
