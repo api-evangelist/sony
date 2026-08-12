@@ -124,8 +124,6 @@ common:
     url: https://oss.sony.net/
   - type: SpectralRules
     url: rules/sony-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/sony-developer-platform.yaml
   - type: Vocabulary
     url: vocabulary/sony-vocabulary.yml
   - type: Features
