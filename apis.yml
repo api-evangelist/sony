@@ -34,6 +34,10 @@ apis:
   - aid: sony:nnabla
     name: Sony Neural Network Libraries (NNabla)
     tags:
+      - Machine-Learning
+      - Deep Learning
+      - Open-Source
+    tags_raw:
       - Machine Learning
       - Deep Learning
       - Open Source
@@ -59,6 +63,10 @@ apis:
     name: Sonyflake Distributed ID Generator
     tags:
       - Distributed Systems
+      - Open-Source
+      - Identifiers
+    tags_raw:
+      - Distributed Systems
       - Open Source
       - Identifiers
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -77,6 +85,10 @@ apis:
   - aid: sony:gobreaker
     name: Sony gobreaker Circuit Breaker
     tags:
+      - Resilience
+      - Open-Source
+      - Microservices
+    tags_raw:
       - Resilience
       - Open Source
       - Microservices
