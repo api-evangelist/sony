@@ -60,7 +60,7 @@ apis:
       - url: https://nnabla.readthedocs.io/
         type: Documentation
       - url: https://github.com/sony/nnabla-examples
-        type: Samples
+        type: Examples
       - url: https://pypi.org/project/nnabla/
         type: Package
       - url: json-schema/nnabla-network-schema.json
