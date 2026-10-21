@@ -120,6 +120,85 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-xr-graphics.py
   first_seen: '2026-10-20'
+- partner_name: NEXTGEN TV (ATSC 3.0) device listing
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.watchnextgentv.com/shop/sony/
+  category: ATSC 3.0 NEXTGEN TV certified devices
+  contract_reference:
+    register: NEXTGEN TV devices (watchnextgentv.com/shop, wp-json/wp/v2/shop)
+    standard: ATSC 3.0 (NEXTGEN TV)
+    spec_file: null
+    role: nextgen-tv-device-brand
+    registered_name: Sony
+    matched_domain: sony.com
+    matched_by: domain
+    device_types:
+    - TV
+    signal_note: certified_products = one per NEXTGEN TV certified device type (TV / upgrade accessory); antenna
+      listings are participation only (antennas are not ATSC 3.0 certified devices). Listing counts are context,
+      never counted; the site marks nothing as withdrawn
+    detected_by: sweep-broadcast-tv.py
+    detected: '2026-10-20'
+    certified_products:
+    - product: NEXTGEN TV certified television
+      device_type: TV
+      lapsed: false
+      listings:
+      - Sony
+    identity: wikidata Q41187 'Sony Group' P856 https://www.sony.com/en/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-broadcast-tv.py
+  first_seen: '2026-10-20'
+- partner_name: ATSC (Advanced Television Systems Committee)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.atsc.org/members/
+  category: broadcast television standards body membership
+  contract_reference:
+    register: ATSC members (atsc.org/members/)
+    standard: ATSC 3.0
+    spec_file: null
+    role: atsc-member
+    registered_name: Sony
+    matched_domain: sony.com
+    matched_by: domain
+    signal_note: 'participation only: standards-body membership (the page does not mark voting / observer class)'
+    detected_by: sweep-broadcast-tv.py
+    detected: '2026-10-20'
+  detected_by: sweep-broadcast-tv.py
+  first_seen: '2026-10-20'
+- partner_name: DVB Project
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://dvb.org/about/members/sony/
+  category: digital video broadcasting consortium membership
+  contract_reference:
+    register: DVB Project members (dvb.org/membership/, vtm-members data/members.json)
+    standard: DVB
+    spec_file: null
+    role: dvb-member
+    registered_name: Sony
+    register_id: https://dvb.org/about/members/sony/
+    matched_domain: sony.com
+    matched_by: domain
+    signal_note: 'participation only: consortium membership'
+    detected_by: sweep-broadcast-tv.py
+    detected: '2026-10-20'
+  detected_by: sweep-broadcast-tv.py
+  first_seen: '2026-10-20'
 generated: '2026-10-20'
 method: searched
 source:
@@ -134,3 +213,10 @@ checked:
 - https://www.khronos.org/conformance/adopters/conformant-products
 - https://www.khronos.org/conformance/adopters/file-format-adopters
 - https://www.khronos.org/members/list
+- https://dvb.org/membership/
+- https://www.atsc.org/members/
+- https://www.atsc.org/nextgen-tv/deployments/
+- https://www.hbbtv.org/membership/
+- https://www.hbbtv.org/resource-library/
+- https://www.hbbtv.org/wp-content/uploads/2022/06/List-of-Test-Suite-Licensees-06-2022.pdf
+- https://www.watchnextgentv.com/shop/receivers/
